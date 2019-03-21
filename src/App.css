@@ -1,8 +1,9 @@
 body {
-  background-image: url(images/pattern1.png);
+  background-image: url(images/pattern.png);
   background-size: 100%;
 }
 
+/* 
 #star1 {
   width: 13%;
   height: 13%;
@@ -11,7 +12,7 @@ body {
   margin-right: 33.5%;
   margin-top: 29%;
   animation-name: star1a;
-  animation-duration: 5s;
+  animation-duration: s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate;
@@ -19,7 +20,6 @@ body {
 }
 
 #star1:hover {
-  /* opacity: 1; */
   animation-name: star1b;
   animation-duration: 1s;
   animation-iteration-count: 1;
@@ -42,4 +42,4 @@ body {
   to {
     transform: rotate(180deg);
   }
-}
+} */
