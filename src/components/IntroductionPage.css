@@ -1,6 +1,10 @@
 .intro {
-    background-color: #447ab8;
-    margin: 10%;
-    width: 80%;
-    height: 1000px;
+    background-color: #faf3e1;
+    opacity: 0.9;
+    color: #295ab3;
+    text-align: justify;
+    border-radius: 3%;
+    margin: 15%;
+    padding: 5%;
+    width: 60%;
 }
