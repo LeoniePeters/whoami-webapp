@@ -1,0 +1,50 @@
+.intro {
+    display: inline-block;
+    background-color: #faf3e1;
+    opacity: 0.9;
+    color: #295ab3;
+    text-align: justify;
+    border-radius: 3%;
+    margin: 15%;
+    margin-right: 0%;
+    padding: 5%;
+    width: 60%;
+}
+
+#star2 {
+    width: 14%;
+    position: fixed;
+    left: 86%;
+    margin-top: 21.8%;
+    animation-name: star2a;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+   
+  }
+  
+  #star2:hover {
+    animation-name: star2b;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes star2a {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes star2b {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
