@@ -15,10 +15,13 @@ class PatternAlgorithm extends Component {
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         canvas.width = canvas.width;
-        const randomNumber1 = Math.floor(Math.random() * 75 + 25)
+        let randomNumber1 = Math.floor(Math.random() * 75 + 25)
+        const r = Math.floor(Math.random() * 50 + 50)
+        if(r-randomNumber1 > 35) {
+            randomNumber1 += 35
+        }
         let x = randomNumber1
         let y = randomNumber1
-        const r = Math.floor(Math.random() * 50 + 50)
         const x1 = x
         x = 100
         const y1 = y
@@ -56,7 +59,14 @@ class PatternAlgorithm extends Component {
                 {this.state.display === 'patternAlgorithm' &&
                     <div>
                         <div className='intro'>
+                        <h1>Pattern generating algorithm</h1>
                             <p>Click on the button to generate a pattern!</p>
+                            <p>The pattern is created by an algorithm that draws circles and dots. 
+                                The circles' and dots' radius and coordinates are determined by random numbers.
+                                I did play around with the proportions to make sure every outcome is delightful.
+                                This algorithm is a work in progress. In the future I will add the possibility
+                                for the user to pick their favourite color and generate a more personalised pattern
+                                based on some personal info the user can provide in a form.</p>
                             <p>This is my gift to you as a visitor. Thanks for stopping by!</p>
                             <button onClick={() => this.patternAlgorithm()}>click!</button>
                             <canvas id="myCanvas" width={500} height={500} 
