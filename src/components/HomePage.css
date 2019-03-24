@@ -30,7 +30,7 @@ body {
   #star1:hover {
     /* opacity: 1; */
     animation-name: star1b;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
   }

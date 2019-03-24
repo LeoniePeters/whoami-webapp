@@ -12,10 +12,10 @@
 }
 
 #star2 {
-    width: 14%;
+    width: 14.5%;
     position: fixed;
-    left: 86%;
-    margin-top: 21.8%;
+    left: 85.8%;
+    margin-top: 21.4%;
     animation-name: star2a;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -26,7 +26,7 @@
   
   #star2:hover {
     animation-name: star2b;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
   }
