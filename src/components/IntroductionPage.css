@@ -10,8 +10,19 @@
     width: 60%;
 }
 
+h1 {
+  text-align: left;
+  margin-top: 0;
+}
+
+a {
+  display: block;
+}
+
 canvas {
   background-color: rgba(250, 243, 225, 1);
+  border-radius: 3%;
+  margin: 2em;
 }
 
 #star2 {
