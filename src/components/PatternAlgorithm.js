@@ -15,23 +15,24 @@ class PatternAlgorithm extends Component {
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         canvas.width = canvas.width;
-        let randomNumber1 = Math.floor(Math.random() * 75 + 25)
-        const r = Math.floor(Math.random() * 50 + 50)
-        if(r-randomNumber1 > 35) {
+        let randomNumber1 = Math.floor(Math.random() * 76 + 25)
+        const r = Math.floor(Math.random() * 51 + 50)
+        if (r - randomNumber1 >= 35) {
             randomNumber1 += 35
         }
         let x = randomNumber1
         let y = randomNumber1
+        console.log(x, r)
         const x1 = x
-        x = 100
+        x = 0
         const y1 = y
-        y = 100
-        let a = 1
-        let b = 1
+        y = 0
+        let a = 0
+        let b = 0
         let q = 0.1 * r
 
-        while (a < Math.floor(450 / r) && a < Math.floor(450 / x1)) {
-            while (b < Math.floor(450 / r) && b < Math.floor(450 / x1)) {
+        while (a <= Math.floor((500 + x1) / x1)) {
+            while (b <= Math.floor((500 + x1) / x1)) {
                 ctx.strokeStyle = "#295ab3"
                 ctx.lineWidth = 1.5;
                 ctx.beginPath();
@@ -46,10 +47,10 @@ class PatternAlgorithm extends Component {
                 x += x1;
                 b++
             }
-            x = 100
+            x = 0
             y += y1;
             a++;
-            b = 1;
+            b = 0;
         }
     }
 
@@ -59,18 +60,26 @@ class PatternAlgorithm extends Component {
                 {this.state.display === 'patternAlgorithm' &&
                     <div>
                         <div className='intro'>
-                        <h1>Pattern generating algorithm</h1>
+                            <h1>Pattern generating algorithm</h1>
                             <p>Click on the button to generate a pattern!</p>
-                            <p>The pattern is created by an algorithm that draws circles and dots. 
-                                The circles' and dots' radius and coordinates are determined by random numbers.
-                                I did play around with the proportions to make sure every outcome is delightful.
-                                This algorithm is a work in progress. In the future I will add the possibility
-                                for the user to pick their favourite color and generate a more personalised pattern
-                                based on some personal info the user can provide in a form.</p>
-                            <p>This is my gift to you as a visitor. Thanks for stopping by!</p>
                             <button onClick={() => this.patternAlgorithm()}>click!</button>
-                            <canvas id="myCanvas" width={500} height={500} 
+                            <p>If unsatisfied, click again. There are 2930 variations :-)</p>
+                            <p>This is my gift to you as a visitor. Thanks for stopping by!</p>
+                            <a href="#algoInfo">Want to know more?</a>
+                            <canvas id="myCanvas" width={500} height={500}
                             > </canvas>
+
+                            <p id="algoInfo">I wrote an algorithm that creates a pattern by drawing circles and dots. The algorithm works like this:</p>
+                            <ol>
+                                <li>It generates a random number between 25 and 100 that determines the distance between circles.</li>
+                                <li>It generates a random number between 50 and 100 which determines the circle's radius.</li>
+                                <li>It draws a circle based on the generated random numbers and a filled circle(dot) one tenth the size of the outer circle.</li>
+                                <li>The code that generates circles and dots gets looped over x amount of times, as often so that the pattern fills the canvas.</li>
+                            </ol>
+                            <p>I did play around with the maximum and minimum proportions to make sure every outcome is delightful.
+                            This algorithm is a work in progress. In the future I will add the possibility
+                            for the user to pick their favourite color and generate a more personalised pattern
+                            based on some personal info the user can provide in a form.</p>
                         </div>
                         <img onClick={this.handleOnClick} src={star2} alt='star2' id="star2" />
                     </div>
