@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CompactPicker } from 'react-color';
+import ToolTip from 'react-portal-tooltip'
 import star2 from '../images/star-r1b3.png'
 import HomePage from './HomePage'
 import './PatternAlgorithm.css'
@@ -8,7 +9,23 @@ class PatternAlgorithm extends Component {
     state = {
         display: 'patternAlgorithm',
         color1: '#295ab3',
-        color2: '#ff6600'
+        color2: '#ff6600',
+        isTooltipActive1: false,
+        isTooltipActive2: false
+    }
+
+    showTooltip1() {
+        this.setState({isTooltipActive1: true})
+    }
+    hideTooltip1() {
+        this.setState({isTooltipActive1: false})
+    }
+
+    showTooltip2() {
+        this.setState({isTooltipActive2: true})
+    }
+    hideTooltip2() {
+        this.setState({isTooltipActive2: false})
     }
 
     handleChangeComplete1 = (color) => {
@@ -73,12 +90,25 @@ class PatternAlgorithm extends Component {
                     <div>
                         <div className='pattern'>
                             <h1>Pattern generating algorithm</h1>
+                            <p className='colorpicker' style={{backgroundColor: this.state.color1}}
+                            id="color1" onMouseEnter={this.showTooltip1.bind(this)} 
+                            onMouseLeave={this.hideTooltip1.bind(this)}> </p>
+                            <ToolTip active={this.state.isTooltipActive1} position="bottom" arrow="center" parent="#color1">
+                            <div>
                             <CompactPicker
                                 color={this.state.color1}
                                 onChangeComplete={this.handleChangeComplete1} />
+                                </div>
+                            </ToolTip>
+                            <p className='colorpicker' style={{backgroundColor: this.state.color2}}
+                            id="color2" onMouseEnter={this.showTooltip2.bind(this)} onMouseLeave={this.hideTooltip2.bind(this)}> </p>
+                            <ToolTip active={this.state.isTooltipActive2} position="bottom" arrow="center" parent="#color2">
+                            <div>
                             <CompactPicker
                                 color={this.state.color2}
                                 onChangeComplete={this.handleChangeComplete2} />
+                                </div>
+                            </ToolTip>
                             <button onClick={() => this.patternAlgorithm()}>Click to generate a pattern!</button>
                             <p>This is my gift to you as a visitor. Thanks for stopping by!
                                 If unsatisfied, click again. There are 2930 variations 8-)</p>
