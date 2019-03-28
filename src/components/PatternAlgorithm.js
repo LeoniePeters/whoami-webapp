@@ -1,12 +1,40 @@
 import React, { Component } from 'react';
+import { CompactPicker } from 'react-color';
+import ToolTip from 'react-portal-tooltip'
 import star2 from '../images/star-r1b3.png'
 import HomePage from './HomePage'
 import './PatternAlgorithm.css'
 
 class PatternAlgorithm extends Component {
     state = {
-        display: 'patternAlgorithm'
+        display: 'patternAlgorithm',
+        color1: '#295ab3',
+        color2: '#ff6600',
+        isTooltipActive1: false,
+        isTooltipActive2: false
     }
+
+    showTooltip1() {
+        this.setState({isTooltipActive1: true})
+    }
+    hideTooltip1() {
+        this.setState({isTooltipActive1: false})
+    }
+
+    showTooltip2() {
+        this.setState({isTooltipActive2: true})
+    }
+    hideTooltip2() {
+        this.setState({isTooltipActive2: false})
+    }
+
+    handleChangeComplete1 = (color) => {
+        this.setState({ color1: color.hex });
+    };
+
+    handleChangeComplete2 = (color) => {
+        this.setState({ color2: color.hex });
+    };
 
     handleOnClick = () => {
         this.setState({ display: 'home' })
@@ -34,7 +62,7 @@ class PatternAlgorithm extends Component {
 
         while (a <= Math.floor((500 + x1) / x1)) {
             while (b <= Math.floor((500 + x1) / x1)) {
-                ctx.strokeStyle = "#295ab3"
+                ctx.strokeStyle = this.state.color1
                 ctx.lineWidth = 1.5;
                 ctx.beginPath();
                 ctx.arc(x, y, r, 0, 2 * Math.PI);
@@ -42,7 +70,7 @@ class PatternAlgorithm extends Component {
 
                 ctx.beginPath();
                 ctx.arc(x, y, q, 0, 2 * Math.PI);
-                ctx.fillStyle = '#ff6600';
+                ctx.fillStyle = this.state.color2;
                 ctx.fill();
 
                 x += x1;
@@ -62,8 +90,27 @@ class PatternAlgorithm extends Component {
                     <div>
                         <div className='pattern'>
                             <h1>Pattern generating algorithm</h1>
+                            <p className='colorpicker' style={{backgroundColor: this.state.color1}}
+                            id="color1" onMouseEnter={this.showTooltip1.bind(this)} 
+                            onMouseLeave={this.hideTooltip1.bind(this)}> </p>
+                            <ToolTip active={this.state.isTooltipActive1} position="bottom" arrow="center" parent="#color1">
+                            <div>
+                            <CompactPicker
+                                color={this.state.color1}
+                                onChangeComplete={this.handleChangeComplete1} />
+                                </div>
+                            </ToolTip>
+                            <p className='colorpicker' style={{backgroundColor: this.state.color2}}
+                            id="color2" onMouseEnter={this.showTooltip2.bind(this)} onMouseLeave={this.hideTooltip2.bind(this)}> </p>
+                            <ToolTip active={this.state.isTooltipActive2} position="bottom" arrow="center" parent="#color2">
+                            <div>
+                            <CompactPicker
+                                color={this.state.color2}
+                                onChangeComplete={this.handleChangeComplete2} />
+                                </div>
+                            </ToolTip>
                             <button onClick={() => this.patternAlgorithm()}>Click to generate a pattern!</button>
-                            <p>This is my gift to you as a visitor. Thanks for stopping by! 
+                            <p>This is my gift to you as a visitor. Thanks for stopping by!
                                 If unsatisfied, click again. There are 2930 variations 8-)</p>
                             <a href="#algoInfo">Want to know more?</a>
                             <canvas id="myCanvas" width={500} height={500}
