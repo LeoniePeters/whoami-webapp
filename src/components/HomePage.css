@@ -3,7 +3,7 @@ body {
     background-size: 100%;
   }
   
-  #star1, #star3 {
+  #star1, #star3, #star {
     animation-name: star1a;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -11,7 +11,7 @@ body {
     animation-direction: alternate;
   }
   
-  #star1:hover, #star3:hover {
+  #star1:hover, #star3:hover, #star:hover{
     animation-name: star1b;
     animation-duration: 0.7s;
     animation-iteration-count: 1;

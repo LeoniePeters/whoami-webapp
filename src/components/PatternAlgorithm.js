@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import star2 from '../images/star-r1b3.png'
 import HomePage from './HomePage'
+import './PatternAlgorithm.css'
 
 class PatternAlgorithm extends Component {
     state = {
@@ -59,12 +60,11 @@ class PatternAlgorithm extends Component {
             <div>
                 {this.state.display === 'patternAlgorithm' &&
                     <div>
-                        <div className='intro'>
+                        <div className='pattern'>
                             <h1>Pattern generating algorithm</h1>
-                            <p>Click on the button to generate a pattern!</p>
-                            <button onClick={() => this.patternAlgorithm()}>click!</button>
-                            <p>If unsatisfied, click again. There are 2930 variations :-)</p>
-                            <p>This is my gift to you as a visitor. Thanks for stopping by!</p>
+                            <button onClick={() => this.patternAlgorithm()}>Click to generate a pattern!</button>
+                            <p>This is my gift to you as a visitor. Thanks for stopping by! 
+                                If unsatisfied, click again. There are 2930 variations 8-)</p>
                             <a href="#algoInfo">Want to know more?</a>
                             <canvas id="myCanvas" width={500} height={500}
                             > </canvas>
