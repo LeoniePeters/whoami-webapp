@@ -1,0 +1,31 @@
+.welcome {
+    display: inline-block;
+    background-color: rgba(255, 251, 240, 0.9);
+    color: #295ab3;
+    text-align: justify;
+    border-radius: 3%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+    width: 70%;
+}
+
+#portrait {
+    width: 250px;
+    float: right;
+    margin-left: 5%;
+}
+
+#star {
+  width: 16%;
+  float: left;
+  margin-right: 30%
+}
+
+.socialMedia {
+  display: inline-block;
+  width: 5%;
+  padding: 20px;
+  margin-top: 5%;
+}

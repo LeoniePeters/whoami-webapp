@@ -3,6 +3,16 @@ body {
   background-size: 100%;
 }
 
-button {
+h1 {
+  text-align: left;
+  margin-top: 0;
+}
+
+a {
   display: block;
 }
+
+/* 
+button {
+  display: block;
+} */
