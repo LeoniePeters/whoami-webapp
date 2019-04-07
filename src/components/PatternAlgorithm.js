@@ -14,21 +14,14 @@ class PatternAlgorithm extends Component {
         isTooltipActive2: false
     }
 
-    showTooltip1() {
-        this.setState({isTooltipActive1: true})
+    showTooltip(tooltip) {
+        this.setState({[tooltip]: true})
     }
-    hideTooltip1() {
-        this.setState({isTooltipActive1: false})
-    }
-
-    showTooltip2() {
-        this.setState({isTooltipActive2: true})
-    }
-    hideTooltip2() {
-        this.setState({isTooltipActive2: false})
+    hideTooltip(tooltip) {
+        this.setState({[tooltip]: false})
     }
 
-    handleChangeComplete1 = (color) => {
+    handleChangeComplete = (color) => {
         this.setState({ color1: color.hex });
     };
 
@@ -91,17 +84,18 @@ class PatternAlgorithm extends Component {
                         <div className='pattern'>
                             <h1>Pattern generating algorithm</h1>
                             <p className='colorpicker' style={{backgroundColor: this.state.color1}}
-                            id="color1" onMouseEnter={this.showTooltip1.bind(this)} 
-                            onMouseLeave={this.hideTooltip1.bind(this)}> </p>
+                            id="color1" onMouseEnter={this.showTooltip.bind(this, 'isTooltipActive1')} 
+                            onMouseLeave={this.hideTooltip.bind(this, 'isTooltipActive1')}> </p>
                             <ToolTip active={this.state.isTooltipActive1} position="bottom" arrow="center" parent="#color1">
                             <div>
                             <CompactPicker
                                 color={this.state.color1}
-                                onChangeComplete={this.handleChangeComplete1} />
+                                onChangeComplete={() => this.handleChangeComplete()} />
                                 </div>
                             </ToolTip>
                             <p className='colorpicker' style={{backgroundColor: this.state.color2}}
-                            id="color2" onMouseEnter={this.showTooltip2.bind(this)} onMouseLeave={this.hideTooltip2.bind(this)}> </p>
+                            id="color2" onMouseEnter={this.showTooltip.bind(this, 'isTooltipActive2')} 
+                            onMouseLeave={this.hideTooltip.bind(this, 'isTooltipActive2')}> </p>
                             <ToolTip active={this.state.isTooltipActive2} position="bottom" arrow="center" parent="#color2">
                             <div>
                             <CompactPicker
@@ -109,7 +103,7 @@ class PatternAlgorithm extends Component {
                                 onChangeComplete={this.handleChangeComplete2} />
                                 </div>
                             </ToolTip>
-                            <button onClick={() => this.patternAlgorithm()}>Click to generate a pattern!</button>
+                            <button onClick={this.patternAlgorithm}>Click to generate a pattern!</button>
                             <p>This is my gift to you as a visitor. Thanks for stopping by!
                                 If unsatisfied, click again. There are 2930 variations 8-)</p>
                             <a href="#algoInfo">Want to know more?</a>
