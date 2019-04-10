@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { CompactPicker } from 'react-color';
-import ToolTip from 'react-portal-tooltip'
-import star2 from '../images/star-r1b3.png'
+
 import HomePage from './HomePage'
 import PatternAlgorithm from './PatternAlgorithm'
 import './PatternAlgorithm.css'
