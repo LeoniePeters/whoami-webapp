@@ -19,8 +19,10 @@ class HomePage extends Component {
       <div>
         {this.state.display === 'home' &&
           <div>
-            <img onClick={() => this.handleOnClick('patternAlgorithm')} src={star3} alt='star3' id="star3" />
-            <img onClick={() => this.handleOnClick('introduction')} src={star1} alt='star1' id="star1" />
+            <img onClick={() => this.handleOnClick('patternAlgorithm')}
+              src={star3} alt='star3' id="star3" />
+            <img onClick={() => this.handleOnClick('introduction')}
+              src={star1} alt='star1' id="star1" />
           </div>
         }
 
