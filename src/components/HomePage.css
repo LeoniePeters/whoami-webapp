@@ -3,7 +3,7 @@ body {
     background-size: 100%;
   }
   
-  #star1, #star3, #star {
+  #star1, #star3, #star4, #star {
     animation-name: star1a;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -11,7 +11,7 @@ body {
     animation-direction: alternate;
   }
   
-  #star1:hover, #star3:hover, #star:hover{
+  #star1:hover, #star3:hover, #star4:hover, #star:hover{
     animation-name: star1b;
     animation-duration: 0.7s;
     animation-iteration-count: 1;
@@ -19,17 +19,24 @@ body {
   }
 
   #star1 {
-    width: 16%;
+    width: 15.8%;
     position: absolute;
     left: 70%;
     margin-top: 20.5%;
   }
 
   #star3 {
-    width: 18.5%;
+    width: 18%;
     position: absolute;
-    left: 10%;
-    margin-top: 4.5%;
+    left: 10.2%;
+    margin-top: 4.9%;
+  }
+
+  #star4 {
+    width: 20.3%;
+    position: absolute;
+    left: 7.9%;
+    margin-top: 34.7%;
   }
   
   @keyframes star1a {

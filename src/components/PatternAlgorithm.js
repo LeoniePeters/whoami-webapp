@@ -21,38 +21,40 @@ export default function PatternAlgorithm(props) {
     <div>
       <div className='pattern'>
         <h1>Pattern generating algorithm</h1>
-        <p className='colorpicker'
-          style={{ backgroundColor: color1 }}
-          id="color1"
-          onMouseEnter={showTooltip.bind(thiss, 'isTooltipActive1')}
-          onMouseLeave={hideTooltip.bind(thiss, 'isTooltipActive1')}>
-        </p>
-        <ToolTip active={isTooltipActive1}
-          position="bottom"
-          arrow="center"
-          parent="#color1">
-          <div>
-            <CompactPicker
-              color={color1}
-              onChangeComplete={handleChangeComplete1} />
-          </div>
-        </ToolTip>
-        <p className='colorpicker'
-          style={{ backgroundColor: color2 }}
-          id="color2"
-          onMouseEnter={showTooltip.bind(thiss, 'isTooltipActive2')}
-          onMouseLeave={hideTooltip.bind(thiss, 'isTooltipActive2')}>
-        </p>
-        <ToolTip active={isTooltipActive2}
-          position="bottom"
-          arrow="center"
-          parent="#color2">
-          <div>
-            <CompactPicker color={color2}
-              onChangeComplete={handleChangeComplete2} />
-          </div>
-        </ToolTip>
-        <button onClick={patternAlgorithm}>Click to generate a pattern!</button>
+        <section>
+          <p className='colorpicker'
+            style={{ backgroundColor: color1 }}
+            id="color1"
+            onMouseEnter={showTooltip.bind(thiss, 'isTooltipActive1')}
+            onMouseLeave={hideTooltip.bind(thiss, 'isTooltipActive1')}>
+          </p>
+          <ToolTip active={isTooltipActive1}
+            position="bottom"
+            arrow="center"
+            parent="#color1">
+            <div>
+              <CompactPicker
+                color={color1}
+                onChangeComplete={handleChangeComplete1} />
+            </div>
+          </ToolTip>
+          <p className='colorpicker'
+            style={{ backgroundColor: color2 }}
+            id="color2"
+            onMouseEnter={showTooltip.bind(thiss, 'isTooltipActive2')}
+            onMouseLeave={hideTooltip.bind(thiss, 'isTooltipActive2')}>
+          </p>
+          <ToolTip active={isTooltipActive2}
+            position="bottom"
+            arrow="center"
+            parent="#color2">
+            <div>
+              <CompactPicker color={color2}
+                onChangeComplete={handleChangeComplete2} />
+            </div>
+          </ToolTip>
+          <button onClick={patternAlgorithm} className='patternButton'>Click to generate a pattern!</button>
+        </section>
         <p>This is my gift to you as a visitor. Thanks for stopping by!
           If unsatisfied, click again. There are 2930 variations 8-)</p>
         <a href="#algoInfo">Want to know more?</a>
