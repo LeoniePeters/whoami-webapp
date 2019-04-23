@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './PortfolioPage.css';
+// import './PortfolioPage.css';
 import star2 from '../images/star-r1b3.png'
 import HomePage from './HomePage'
 
