@@ -9,7 +9,7 @@ import './HomePage.css';
 
 class HomePage extends Component {
   state = {
-    display: 'portfolio'
+    display: 'home'
   }
 
   handleOnClick = (display) => {
