@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import './PortfolioPage.css';
+import './PortfolioPage.css';
 import star2 from '../images/star-r1b3.png'
 import HomePage from './HomePage'
 
@@ -18,19 +18,33 @@ export default class PortfolioPage extends Component {
       <div>
         {this.state.display === 'portfolio' &&
           <div>
-            <div className='intro'>
-              <p>I have always had a thing for patterns. You can recognize that
-                in the clothing I wear,the drawings I make (this background is
-                an example), the art that I love...</p>
-              <p>When I started getting interested in code I discovered that
-                coding is actually all about that too, patterns.</p>
-              <p>Coding is recognizing how different folders, files, data are
-                linked and passed along. It's like a puzzle,the pieces have to
-                fit. But the pieces are not always clearly provided. That is
-                both the frustrating and the fun part of coding. Irregularities
-                in the code's pattern cause bugs. But when you recognize the
-                pattern, are in a coding flow, find the key that fits, and make
-                something actually work, that is all joy!</p>
+            <div className='portfolio'>
+              <h1>My projects</h1>
+              <p>Here you can find some apps I coded!</p>
+              <article>
+                <h2>Ohmmmm</h2>
+                <p>Final group project for Codaisseur Code Academy: A meditation game for kids.</p>
+                <p>Front-end: JavaScript, CSS, HTML, React, Redux<br></br>
+                  Game: Phaser 3<br></br>
+                  Back-end: NodeJS, Express</p>
+
+                <a href='https://github.com/LeoniePeters/ohmmmm'
+                  target="_blank"
+                  rel='noopener noreferrer'>
+                  GitHub repository</a>
+              </article>
+              <article>
+                <h2>Drawbsurd</h2>
+                <p>Group project for Codaisseur Code Academy: Multiplayer Pictionary game.</p>
+                <p>Front-end: JavaScript, CSS, HTML, React, Redux<br></br>
+                  Back-end: TypeScript, Koa, TypeORM, Socket.IO</p>
+
+                <a href='https://github.com/LeoniePeters/Drawbsurd-game-client'
+                  target="_blank"
+                  rel='noopener noreferrer'>
+                  GitHub repository</a>
+              </article>
+
             </div>
             <img onClick={this.handleOnClick}
               src={star2} alt='star2' id="star2" />
