@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/553ad798-0562-4be5-a084-d5e1eafb1a20/deploy-status)](https://app.netlify.com/sites/leonie-webapp/deploys)
+
 # :raising_hand: Leonie's webapp :large_blue_diamond: :small_orange_diamond: :large_blue_diamond:
 Leonie's webapp is an online presentation of who I am and what I love about coding.
 It includes a pattern generating algorithm, some explanation about my passion for patterns.
