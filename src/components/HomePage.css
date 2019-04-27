@@ -1,58 +1,53 @@
-body {
-    background-image: url(../images/pattern.png);
-    background-size: 100%;
-  }
-  
-  #star1, #star3, #star4, #star {
-    animation-name: star1a;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-  }
-  
-  #star1:hover, #star3:hover, #star4:hover, #star:hover{
-    animation-name: star1b;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
+#star1, #star3, #star4, #star {
+  animation-name: star1a;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
 
-  #star1 {
-    width: 15.8%;
-    position: absolute;
-    left: 70%;
-    margin-top: 20.5%;
-  }
+#star1:hover, #star3:hover, #star4:hover, #star:hover{
+  animation-name: star1b;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
 
-  #star3 {
-    width: 18%;
-    position: absolute;
-    left: 10.2%;
-    margin-top: 4.9%;
-  }
+#star1 {
+  width: 7.9%;
+  position: absolute;
+  left: 35.2%;
+  margin-top: 10.2%;
+}
 
-  #star4 {
-    width: 20.3%;
-    position: absolute;
-    left: 7.9%;
-    margin-top: 34.7%;
+#star3 {
+  width: 9%;
+  position: absolute;
+  left: 5.3%;
+  margin-top: 2.4%;
+}
+
+#star4 {
+  width: 10.1%;
+  position: absolute;
+  left: 4.2%;
+  margin-top: 17.3%;
+}
+
+@keyframes star1a {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes star1a {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  @keyframes star1b {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(180deg);
-    }
+}
+
+@keyframes star1b {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(180deg);
+  }
+}
