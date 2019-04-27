@@ -80,10 +80,7 @@ export default function PatternAlgorithm(props) {
             amount of times, as often so that the pattern fills the canvas.</li>
         </ol>
         <p>I did play around with the maximum and minimum proportions to make
-          sure every outcome is delightful. This algorithm is a work in progress.
-          In the future I will add the possibility for the user to pick their
-          favourite color and generate a more personalised pattern based on some
-          personal info the user can provide in a form.</p>
+          sure every outcome is delightful. This algorithm is a work in progress.</p>
       </div>
     </div>
 
