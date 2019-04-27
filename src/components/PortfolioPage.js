@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './PortfolioPage.css';
-import star2 from '../images/star-r1b3.png'
+import star0 from '../images/star0.png'
 import HomePage from './HomePage'
 
 export default class PortfolioPage extends Component {
@@ -47,7 +47,7 @@ export default class PortfolioPage extends Component {
 
             </div>
             <img onClick={this.handleOnClick}
-              src={star2} alt='star2' id="star2" />
+              src={star0} alt='star0' id="star0" />
           </div>
         }
         {this.state.display === 'home' &&

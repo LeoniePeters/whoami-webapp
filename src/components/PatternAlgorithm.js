@@ -1,7 +1,7 @@
 import React from 'react';
 import { CompactPicker } from 'react-color';
 import ToolTip from 'react-portal-tooltip'
-import star2 from '../images/star-r1b3.png'
+import star0 from '../images/star0.png'
 import './PatternAlgorithm.css'
 
 export default function PatternAlgorithm(props) {
@@ -19,6 +19,10 @@ export default function PatternAlgorithm(props) {
 
   return (
     <div>
+      <img onClick={handleOnClick}
+        src={star0}
+        alt='star0'
+        id="star0" />
       <div className='pattern'>
         <h1>Pattern generating algorithm</h1>
         <section>
@@ -81,10 +85,6 @@ export default function PatternAlgorithm(props) {
           favourite color and generate a more personalised pattern based on some
           personal info the user can provide in a form.</p>
       </div>
-      <img onClick={handleOnClick}
-        src={star2}
-        alt='star2'
-        id="star2" />
     </div>
 
   );
