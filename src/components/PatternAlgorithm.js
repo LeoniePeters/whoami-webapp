@@ -61,7 +61,7 @@ export default function PatternAlgorithm(props) {
         </section>
         <p>This is my gift to you as a visitor. Thanks for stopping by!
           If unsatisfied, click again. There are 2930 variations 8-)</p>
-        <a href="#algoInfo">Want to know more?</a>
+        <a href="#algoInfo">Click here or scroll down to know more</a>
         <canvas id="myCanvas"
           width={500}
           height={500}

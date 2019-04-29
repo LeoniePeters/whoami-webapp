@@ -25,7 +25,7 @@ class IntroductionPage extends Component {
                 an example), the art that I love...</p>
               <p>When I started getting interested in code I discovered that
                 coding is actually all about that too, patterns.</p>
-              <p>Coding is recognizing how different folders, files, data are
+              <p>Coding is recognizing how different folders, files and data are
                 linked and passed along. It's like a puzzle,the pieces have to
                 fit. But the pieces are not always clearly provided. That is
                 both the frustrating and the fun part of coding. Irregularities
