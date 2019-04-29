@@ -4,20 +4,20 @@
     color: #295ab3;
     text-align: justify;
     border-radius: 3%;
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 5%;
+    margin: 3% 10%;
+    padding: 3% 5%;
     width: 70%;
 }
 
 #portrait {
-    width: 250px;
+    width: 230px;
     float: right;
     margin-left: 5%;
 }
 
 #star {
+  min-width: 50px;
+  max-width: 95px;
   width: 16%;
   float: left;
   margin-right: 30%

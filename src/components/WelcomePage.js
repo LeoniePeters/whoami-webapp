@@ -25,7 +25,7 @@ class WelcomePage extends Component {
           enter my universe!</p>
         <p>Hint 1: the blinking stars are your guide. They link to different
           pages.</p>
-        <p>Hint2: the topleft blinking star contains a pattern generating
+        <p>Hint 2: the topleft blinking star contains a pattern generating
           algorithm!</p>
         <p>When you're ready, click on the star!</p>
         <Link to='/home'>

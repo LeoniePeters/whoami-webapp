@@ -61,7 +61,7 @@ export default function PatternAlgorithm(props) {
         </section>
         <p>This is my gift to you as a visitor. Thanks for stopping by!
           If unsatisfied, click again. There are 2930 variations 8-)</p>
-        <a href="#algoInfo">Want to know more?</a>
+        <a href="#algoInfo">Click here or scroll down to know more</a>
         <canvas id="myCanvas"
           width={500}
           height={500}
@@ -80,10 +80,7 @@ export default function PatternAlgorithm(props) {
             amount of times, as often so that the pattern fills the canvas.</li>
         </ol>
         <p>I did play around with the maximum and minimum proportions to make
-          sure every outcome is delightful. This algorithm is a work in progress.
-          In the future I will add the possibility for the user to pick their
-          favourite color and generate a more personalised pattern based on some
-          personal info the user can provide in a form.</p>
+          sure every outcome is delightful. This algorithm is a work in progress.</p>
       </div>
     </div>
 
